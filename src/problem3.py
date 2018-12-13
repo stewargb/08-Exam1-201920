@@ -286,9 +286,9 @@ def problem3b(m, r):
            1/(0.1)  +  2/((1.1)**2)  +  3/((2.1)**3)  +  4/(3.1)**4)),
            which is approximately 12.020144157845959.
      """
-    total=0
+    total = 0
     val = 0
-    count=-1
+    count = -1
     for _ in range(m):
         val = val + 1
         count = count + 1

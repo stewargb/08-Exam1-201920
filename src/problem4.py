@@ -79,6 +79,7 @@ def problem4(number_of_stairs, step_size, starting_point, window):
     window.render()
 
     #starting_point.y=moving_up
+    
     # need to do in onece first so that the if statment will work
 
     for k in range(num_parts):

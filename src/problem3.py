@@ -3,8 +3,8 @@ Exam 1, problem 3.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Grant Stewart.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
@@ -17,7 +17,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-string for the  sum_of_digits  function defined below.
+# Done: 2.  READ the doc-string for the  sum_of_digits  function defined below.
 # It is the same  sum_of_digits  function that you have seen before.
 # After you UNDERSTAND the doc-string (JUST the doc-string, NOT the code),
 # ASKING QUESTIONS AS NEEDED, change the above _TODO_ to DONE.
@@ -162,8 +162,15 @@ def problem3a(r, s):
           -- 4 cubed is    64, whose sum of digits is 10, which is NOT odd.
           -- 5 cubed is   125, whose sum of digits is  8, which is NOT odd.
     """
+    total = 0
+    for k in range (r,s+1):
+        cubed=k**3
+        val = sum_of_digits(cubed)
+        if val % 2 == 1:
+            total = total + k
+    return total
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ###########################################################################
@@ -279,8 +286,16 @@ def problem3b(m, r):
            1/(0.1)  +  2/((1.1)**2)  +  3/((2.1)**3)  +  4/(3.1)**4)),
            which is approximately 12.020144157845959.
      """
+    total=0
+    val = 0
+    count=-1
+    for _ in range(m):
+        val = val + 1
+        count = count + 1
+        total = total + val/((r+count)**val)
+    return total
     ###########################################################################
-    # TODO: 4. Implement and test this function.
+    # done: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
 

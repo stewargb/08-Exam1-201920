@@ -3,8 +3,8 @@ Exam 1, problem 4.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Grant Stewart.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -67,6 +67,41 @@ def problem4(number_of_stairs, step_size, starting_point, window):
       :type starting_point:    rg.Point
       :type window:            rg.RoseWindow
     """
+
+
+    num_parts = (number_of_stairs * 2) - 1
+    moving_up = starting_point.y + step_size
+    ending_point= rg.Point(starting_point.x,moving_up)
+    step = rg.Line(starting_point,ending_point)
+    step.color= 'magenta'
+    step.thickness = 3
+    step.attach_to(window)
+    window.render()
+
+    #starting_point.y=moving_up
+    # need to do in onece first so that the if statment will work
+
+    for k in range(num_parts):
+        if starting_point.y == ending_point.y:
+            starting_point.y = starting_point.y - step_size
+            ending_point.x = ending_point.x + step_size
+
+            starting_point = rg.Point(starting_point.x, starting_point.y)
+            ending_point = rg.Point(ending_point.x, ending_point.y)
+            step = rg.Line(starting_point, ending_point)
+            step.color = 'magenta'
+
+        else:
+            starting_point.x = starting_point.x + step_size
+            ending_point.y = ending_point.y - step_size
+            step = rg.Line(starting_point, ending_point)
+            step.color = 'black'
+        step.thickness = 3
+        step.attach_to(window)
+    window.render()
+
+
+
     # -------------------------------------------------------------------------
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).

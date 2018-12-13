@@ -3,8 +3,8 @@ Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Grant Stewart.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -44,7 +44,40 @@ def test_factor_sum():
     ###########################################################################
     # WRITE YOUR TESTS BELOW HERE:
     ###########################################################################
+    # Test 1
+    expected = 11
+    actual = factor_sum(28)
+    print()
+    print('Test 1 expected:', expected)
+    print('       actual:  ', actual)
 
+    # Test 2
+    expected = 4
+    actual = factor_sum(28)
+    print()
+    print('Test 2 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 3
+    expected = 3
+    actual = factor_sum(11) #test prime number 1 + 11 = 12 => 3
+    print()
+    print('Test 3 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 4
+    expected = 1
+    actual = factor_sum(1) # giving it 1 it should go 1 = 1 => 1
+    print()
+    print('Test 4 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 5
+    expected = 9
+    actual = factor_sum(10) # 1+2+5+10=18=9
+    print()
+    print('Test 5 expected:', expected)
+    print('       actual:  ', actual)
 
 def factor_sum(n):
     """

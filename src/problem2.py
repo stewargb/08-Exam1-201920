@@ -80,6 +80,7 @@ def test_factor_sum():
     print('       actual:  ', actual)
 
 def factor_sum(n):
+    
     """
     Given a positive integer n,
     returns the sum of the digits of the sum of the distinct factors of n,
